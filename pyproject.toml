@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "seizure-onset-detection"
+version = "0.1.0"
+description = "Leakage-resistant continuous EEG seizure detection research benchmark"
+readme = "README.md"
+requires-python = ">=3.11,<3.15"
+license = { text = "MIT" }
+authors = [{ name = "Mourad Gad" }]
+keywords = ["EEG", "seizure detection", "machine learning", "neuroinformatics"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+]
+dependencies = [
+  "numpy>=1.26,<3",
+  "scipy>=1.11",
+  "scikit-learn>=1.4",
+  "imbalanced-learn>=0.12",
+  "mne>=1.6",
+  "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+foundation = [
+  "torch>=2.2",
+  "braindecode[hug]>=1.8.1",
+]
+test = ["pytest>=8"]
+
+[project.urls]
+Homepage = "https://github.com/MouradMgad/Seizure-Detection-Study"
+Repository = "https://github.com/MouradMgad/Seizure-Detection-Study"
+Issues = "https://github.com/MouradMgad/Seizure-Detection-Study/issues"
+
+[project.scripts]
+seizure-detection = "seizure_detection.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

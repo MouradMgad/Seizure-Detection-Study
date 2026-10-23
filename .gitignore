@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+data/
+outputs/
+checkpoints/
+*.edf
+*.edf.gz
+*.mat
+*.npz
+*.pt
+*.pth
+*.pptx
+
+# Local experiment reports and machine-specific paths
+*.log
+*.tmp
+dist/
+.vscode/

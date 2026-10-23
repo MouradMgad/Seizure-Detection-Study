@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the repository and the referenced datasets/models."
+title: "Leakage-resistant EEG seizure-onset detection"
+authors:
+  - family-names: Gad
+    given-names: Mourad
+version: 0.1.0
+date-released: 2026-10-16
+license: MIT
+type: software
+repository-code: "https://github.com/MouradMgad/Seizure-Detection-Study"
+url: "https://github.com/MouradMgad/Seizure-Detection-Study"
